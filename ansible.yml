@@ -1,0 +1,5 @@
+- hosts: all
+  become: true
+  tasks:
+  - name: create docker container
+    shell: docker run -d --name ansible_container -p 8090:8080 mkurvade/ansible_image
